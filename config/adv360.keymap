@@ -39,7 +39,7 @@
           compatible = "zmk,behavior-tap-dance";
           label = "TAP_DANCE_LSHIFT";
           #binding-cells = <0>;
-          tapping-term-ms = <200>;
+          tapping-term-ms = <100>;
           bindings = <&mt LSHFT LPAR>, <&caps_word>, <&kp CAPS>;
       };
       
@@ -47,7 +47,7 @@
           compatible = "zmk,behavior-tap-dance";
           label = "TAP_DANCE_RSHIFT";
           #binding-cells = <0>;
-          tapping-term-ms = <200>;
+          tapping-term-ms = <100>;
           bindings = <&mt RSHFT RPAR>, <&caps_word>, <&kp CAPS>;
       };
     };
