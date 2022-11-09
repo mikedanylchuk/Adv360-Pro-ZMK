@@ -26,6 +26,15 @@
           bindings = <&kp>, <&kp>;
       };
       
+      hpt: hold_preferred_tap {
+          compatible = "zmk,behavior-hold-tap";
+          label = "HOLD_PREFERRED_TAP";
+          #binding-cells = <2>;
+          tapping-term-ms = <200>;
+          flavor = "hold-preferred";
+          bindings = <&kp>, <&kp>;
+      };
+      
       htl: hold_tap_layer {
           compatible = "zmk,behavior-hold-tap";
           label = "HOLD_TAP_LAYER";
@@ -40,7 +49,7 @@
           label = "TAP_DANCE_LSHIFT";
           #binding-cells = <0>;
           tapping-term-ms = <200>;
-          bindings = <&kp LSHFT>, <&kp LPAR>, <&caps_word>, <&kp CAPS>;
+          bindings = <&hpt LSHFT LPAR>, <&caps_word>, <&kp CAPS>;
       };
     };
 
