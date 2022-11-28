@@ -40,8 +40,8 @@
           label = "HOLD_TAP_QUICK_TAP";
           #binding-cells = <2>;
           tapping-term-ms = <200>;
+          quick-tap-ms = <175>;
           flavor = "hold-preferred";
-          quick-tap-ms = <125>;
           bindings = <&kp>, <&kp>;
       };
     };
