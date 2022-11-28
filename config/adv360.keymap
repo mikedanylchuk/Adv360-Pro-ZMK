@@ -36,7 +36,7 @@
       };
       
       htqt: hold_tap_quick_tap {
-          compatible = "zmk,behavior-hold-tap;
+          compatible = "zmk,behavior-hold-tap";
           label = "HOLD_TAP_QUICK_TAP";
           #binding-cells = <2>;
           taping-term-ms = <200>;
