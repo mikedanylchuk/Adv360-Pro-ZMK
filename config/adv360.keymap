@@ -44,6 +44,18 @@
           flavor = "hold-preferred";
           bindings = <&kp>, <&kp>;
       };
+
+      sht: shift_hold_tap {
+          compatible = "zmk,behavior-hold-tap";
+          label = "SHIFT_HOLD_TAP";
+          #binding-cells = <2>;
+          flavor = "hold-preferred";
+          tapping-term-ms = <200>;
+          quick-tap-ms = <175>;
+          bindings = <&kp>, <&kp>;
+          // Hold for any key other than shift <46 65>
+          hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81>;
+      };
     };
 
   keymap {
@@ -51,11 +63,11 @@
 
     default_layer {
       bindings = <
-        &kp EQUAL      &kp N1    &kp N2     &kp N3   &kp N4    &kp N5 &htl KEYPAD KEYPAD                                                                                              &mo 3           &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
-        &kp TAB        &kp Q     &kp W      &kp E    &kp R     &kp T  &kp INSERT                                                                                                      &kp PRINTSCREEN &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
-        &mt LALT ESC   &kp A     &kp S      &kp D    &kp F     &kp G  &kp F12                     &mt LGUI LBRC   &mt LALT LBKT             &mt RALT RBKT &mt RGUI RBRC               &kp PAUSE_BREAK &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
-        &mt LSHFT LPAR &kp Z     &kp X      &kp C    &kp V     &kp B                     &none    &none           &kp HOME      &none &none &kp PG_UP     &none             &none                     &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &mt RSHFT RPAR
-        &mo FN         &kp GRAVE &caps_word &kp LEFT &kp RIGHT                           &kp BSPC &htqt LCTRL DEL &kp END                   &kp PG_DN     &htqt RCTRL ENTER &kp SPACE                        &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo FN
+        &kp EQUAL       &kp N1    &kp N2     &kp N3   &kp N4    &kp N5 &htl KEYPAD KEYPAD                                                                                              &mo 3           &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
+        &kp TAB         &kp Q     &kp W      &kp E    &kp R     &kp T  &kp INSERT                                                                                                      &kp PRINTSCREEN &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
+        &mt LALT ESC    &kp A     &kp S      &kp D    &kp F     &kp G  &kp F12                     &mt LGUI LBRC   &mt LALT LBKT             &mt RALT RBKT &mt RGUI RBRC               &kp PAUSE_BREAK &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
+        &sht LSHFT LPAR &kp Z     &kp X      &kp C    &kp V     &kp B                     &none    &none           &kp HOME      &none &none &kp PG_UP     &none             &none                     &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &sht RSHFT RPAR
+        &mo FN          &kp GRAVE &caps_word &kp LEFT &kp RIGHT                           &kp BSPC &htqt LCTRL DEL &kp END                   &kp PG_DN     &htqt RCTRL ENTER &kp SPACE                        &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo FN
       >;
     };
     keypad {
